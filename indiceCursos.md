@@ -1,6 +1,5 @@
 # Curso de iniciación a Arduino
-No necesitas saber programar
-(bitbloq y C++)
+No necesitas saber programar. Usaremos bitbloq y C++
 
 ## Introducción: Arduino
 
@@ -14,8 +13,6 @@ No necesitas saber programar
 
 	* Control digital con pulsadores
 	* Control analógico con joystick y potenciómetros
-
-* Haciendo música: control digital y analógico
 
 * Visualización de datos en LCD
 
@@ -44,7 +41,6 @@ Termostado ajustable (seleccionamos la temperatura de consigna) con visualizaci�
 * LCD con conexión I2C
 * Sensor de temperatura LM35
 * Servo
-* Buzzer
 
 # Curso Intermedio de Arduino
 (bitbloq + C++)
@@ -55,6 +51,7 @@ Termostado ajustable (seleccionamos la temperatura de consigna) con visualizaci�
 * Medida de luz
 * Medida de sonido
 * Display de 7 segmentos
+* Haciendo música: control digital y analógico
 
 ### Temperaturas
 
@@ -80,6 +77,8 @@ Reloj digital de 7 segmentos con medida de temperatura
 * Mando a distancia de infrarrojos
 * Sensores LDR 10k
 * Reloj RTC
+* Buzzer
+
 
 # Curso Avanzado de Arduino
 (C++)
