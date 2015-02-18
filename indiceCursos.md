@@ -93,11 +93,8 @@ Reloj digital de 7 segmentos con medida de temperatura
 ### Luz
 
 * Matriz de led
-* 
-### Temperaturas
-
-* Termostato con histéresis
-
+	* Conexión 
+	* Programación
 
 ### Motores y servos
 
@@ -109,3 +106,7 @@ Juego Pong con joystick y matriz de led
 
 * Placa Arduino
 * Placa de prototipo y cables para montaje
+* Joystick analógico xy
+* Potenciómetro 10k
+* 3 Pulsadores (y sus resistencias Pullup)
+* Buzzer
