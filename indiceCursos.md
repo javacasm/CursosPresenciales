@@ -28,7 +28,7 @@ No necesitas saber programar. Usaremos bitbloq y C++
 
 ## Proyecto: 
 
-Termostado ajustable (seleccionamos la temperatura de consigna) con visualización de temperatura, y activación de relé y servo al llegar a la temparatura.
+#### Termostado ajustable (seleccionamos la temperatura de consigna) con visualización de temperatura, y activación de relé y servo al llegar a la temparatura.
 
 ## Materiales:
 
@@ -63,7 +63,7 @@ Termostado ajustable (seleccionamos la temperatura de consigna) con visualizaci�
 
 ### Proyecto
 
-Reloj digital de 7 segmentos con medida de temperatura
+#### Reloj digital de 7 segmentos con medida de temperatura
 
 ### Materiales
 
@@ -99,7 +99,7 @@ Reloj digital de 7 segmentos con medida de temperatura
 
 ## Proyecto
 
-Juego Pong con joystick y matriz de led
+#### Juego Pong con joystick y matriz de led
 
 ## Materiales
 
