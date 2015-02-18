@@ -23,8 +23,8 @@ No necesitas saber programar
 
 ### Temperaturas
 
-* Midiendo temperaturas: LM35
-* Termostato: Indicador de temperatura,ajuste de consigna y encendemos relé al llegar a una temperatura
+* Midiendo temperaturas: LM35 y visualizando en LCD.
+* Termostato: Indicador de temperatura, ajuste de consigna y encendemos relé al llegar a una temperatura.
 
 ## Motores y servos
 
@@ -32,7 +32,7 @@ No necesitas saber programar
 
 ## Proyecto: 
 
-Termostado ajustable con activación de relé y servo 
+Termostado ajustable con visualización de temperatura, y activación de relé y servo.
 
 ## Materiales:
 
@@ -61,7 +61,6 @@ Termostado ajustable con activación de relé y servo
 ### Temperaturas
 
 * Midiendo temperaturas: DHT11, Control de calefacción, cálculo de costes
-
 
 ### Motores y servos
 
