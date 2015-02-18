@@ -24,7 +24,6 @@ No necesitas saber programar
 ### Temperaturas
 
 * Midiendo temperaturas: LM35 y visualizando en LCD.
-* Termostato: Indicador de temperatura, ajuste de consigna y encendemos relé al llegar a una temperatura.
 
 ## Motores y servos
 
@@ -32,7 +31,7 @@ No necesitas saber programar
 
 ## Proyecto: 
 
-Termostado ajustable con visualización de temperatura, y activación de relé y servo.
+Termostado ajustable (seleccionamos la temperatura de consigna) con visualización de temperatura, y activación de relé y servo al llegar a la temparatura.
 
 ## Materiales:
 
@@ -56,7 +55,6 @@ Termostado ajustable con visualización de temperatura, y activación de relé y
 * Medida de luz
 * Medida de sonido
 * Display de 7 segmentos
-
 
 ### Temperaturas
 
@@ -95,7 +93,7 @@ Reloj digital de 7 segmentos con medida de temperatura
 ### Luz
 
 * Matriz de led
-
+* 
 ### Temperaturas
 
 * Termostato con histéresis
@@ -103,7 +101,11 @@ Reloj digital de 7 segmentos con medida de temperatura
 
 ### Motores y servos
 
-
 ## Proyecto
 
 Juego Pong con joystick y matriz de led
+
+## Materiales
+
+* Placa Arduino
+* Placa de prototipo y cables para montaje
