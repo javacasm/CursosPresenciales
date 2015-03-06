@@ -109,7 +109,6 @@
 	  delay(1000);
 	  digitalWrite(13,LOW);
 	  delay(1000);
-
 	}
 
 #### Ejercicio: Cambiar al pin del esquema
@@ -127,18 +126,58 @@
 ![ParpadeoSerie](imagenes/ParpadeoSerie.png)
 
 * * * 
+# Escritura de valores analógicos
+
+## Usando técnicas como PWM podemos simular valores intermedios: 0 - 255
+### (sólo en algunos pines)
+
+## Vamos a hacer que cambie: usaremos una variable
+
+![analogWrite](imagenes/AnalogWrite.png)
+
+* * *
+# Led RGB: 3 led (Red,Green,Blue) con una de las patillas común
+
+## Positivo (Ánodo) Común
+
+![LedRGBPcomun](imagenes/LedRGBPcomun.png)
+
+## Negativo (Cátodo) Común
+
+![LedRGBNcomun](imagenes/LedRGBNcomun.png)
+
+## Tiras de leds
+
+![ledstripbjt](imagenes/ledstripbjt.gif)
+
+* * *
+
 # Lectura de datos analógicos
 
-Sensores (luz, temperatura)
+## Sensores (luz, temperatura)
 
-lectura
-Conversiones (aritmética/mapeo)
-Calibraciones
-Actuacion
+## Potenciómetro
+![lecturaAnalogica](imagenes/arduino_pot_led.png)
 
+* * * 
+
+# Para los sensores:
+
+* lectura
+* Conversiones (aritmética/mapeo)
+* Calibraciones
+
+* * *
 LM35
 float valor*5*100/1024 //valores máximos
 
+![lm35](imagenes/Arduino_lm35_board_setup.jpg)
+
+* * *
+
+# Pulsaciones: botones
+
+![boton](imagenes/button.png)
 
 * * *
 
@@ -158,3 +197,4 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 [Adafruit](http://adafruit.com)
 [Sparkfun](http://sparkfun.com)
 [wikipedia](http://es.wikipedia.org)
+[José Pujol](https://tecnopujol.wordpress.com)
