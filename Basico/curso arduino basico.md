@@ -71,11 +71,11 @@
 ### Montaje sencillo
 ![led externo](imagenes/ExampleCircuit_bb.png)
 
-
+[detalle led](imagenes/300px-LED.png)
 
 * * *
 ### Montaje con placa prototipo
-![led placa](imagenes/ledsketch.jpg)
+![led placa](imagenes/led13bb.jpg)
 
 [Placa prototipo](imagenes/breadboard1.gif)
 
@@ -112,9 +112,12 @@
 
 	}
 
-
+#### Ejercicio: Cambiar al pin del esquema
+#### Ejercicio: Cambiar el pin utilizado al pin 2
 * * * 
 # Agradecimientos:
 
 [Arduino](http://arduino.cc)
+[Adafruit](http://adafruit.com)
 [Sparkfun](http://sparkfun.com)
+[wikipedia](http://es.wikipedia.org)
