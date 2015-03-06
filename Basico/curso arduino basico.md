@@ -115,6 +115,43 @@
 #### Ejercicio: Cambiar al pin del esquema
 #### Ejercicio: Cambiar el pin utilizado al pin 2
 * * * 
+# Envío de datos serie
+
+### La comunicación serie se produce via USB entre Arduino y el PC
+
+* Detectamos el puerto
+* Configuramos la velocidad
+* Necesitamos un programa para ver los datos
+
+## Vamos a enviar "Encendido" y "Apagado" al PC
+![ParpadeoSerie](imagenes/ParpadeoSerie.png)
+
+* * * 
+# Lectura de datos analógicos
+
+Sensores (luz, temperatura)
+
+lectura
+Conversiones (aritmética/mapeo)
+Calibraciones
+Actuacion
+
+LM35
+float valor*5*100/1024 //valores máximos
+
+
+* * *
+
+# LCD
+
+* * *
+¿Qué es una librería?
+Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [servo](http://arduino.cc/en/pmwiki.php?n=Reference/Servo)
+
+[Librería LCD MF](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
+[Ejemplos lcd](http://arduino-info.wikispaces.com/LCD-Blue-I2C#v3)
+[Ejemplo bq](http://diwo.bq.com/programando-lcd/)
+* * *
 # Agradecimientos:
 
 [Arduino](http://arduino.cc)
