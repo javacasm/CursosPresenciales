@@ -52,6 +52,8 @@
 
 ## Programa bitbloq
 
+### http://bitbloq.bq.com
+
 ![programa blink](imagenes/blink.png)
 
 * * *
@@ -60,6 +62,8 @@
 
 ![blink](imagenes/tumblr_mj00x5CdpR1s6tqslo1_500.gif)
 
+#### Ejercicio: Cambiar la velocidad de parpadeo
+
 * * * 
 
 ## Con led externo
@@ -67,11 +71,15 @@
 ### Montaje sencillo
 ![led externo](imagenes/ExampleCircuit_bb.png)
 
+
+
 * * *
 ### Montaje con placa prototipo
 ![led placa](imagenes/ledsketch.jpg)
 
 [Placa prototipo](imagenes/breadboard1.gif)
+
+#### Ejercicio: Cambiar el pin utilizado al pin 2
 
 * * *
 
@@ -84,8 +92,10 @@
 
 ![rele](imagenes/relee_arduino.jpg)
 
+#### Ejercicio: Cambiar al pin del esquema
+
 * * * 
-## Veamos el códido
+## Veamos un poco de código
 
 	void setup()
 	{
