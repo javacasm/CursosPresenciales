@@ -40,6 +40,8 @@
 
 ### ¿Qué es un programa?
 
+#### Programa parpadeo
+
 * Encendemos
 * Esperamos
 * Apagamos
@@ -48,29 +50,41 @@
 
 * * *
 
-## Programa
+## Programa bitbloq
 
 ![programa blink](imagenes/blink.png)
 
+* * *
 
 ### Usaremos el led interno
 
+![blink](imagenes/tumblr_mj00x5CdpR1s6tqslo1_500.gif)
+
+* * * 
 
 ## Con led externo
 
 ### Montaje sencillo
 ![led externo](imagenes/ExampleCircuit_bb.png)
 
+* * *
 ### Montaje con placa prototipo
 ![led placa](imagenes/ledsketch.jpg)
 
+[Placa prototipo](imagenes/breadboard1.gif)
+
+* * *
+
 ### Esquema
 ![led externo](imagenes/ExampleCircuit_sch.png)
+
+* * *
 
 ## Con relé
 
 ![rele](imagenes/relee_arduino.jpg)
 
+* * * 
 ## Veamos el códido
 
 	void setup()
