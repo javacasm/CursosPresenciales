@@ -26,14 +26,13 @@
 
 * * *
 
-# Para programar necesitamos:
+# Para hacer un proyecto necesitamos:
 
 * ### Programa
 
 * ### Montaje
 
 #### (descargar el programa en la placa)
-
 
 * * *
 
@@ -78,42 +77,47 @@ Programa parpadeo
 ### Montaje con placa prototipo
 ![led placa](imagenes/led13bb.jpg)
 
-[Placa prototipo](imagenes/breadboard1.gif)
+[¿cómo funciona una placa prototipo?](imagenes/breadboard1.gif)
 
 #### Ejercicio: Cambiar el pin utilizado al pin 2
 
 * * *
 
-### Esquema
+### Esquema eléctrico
+
 ![led externo](imagenes/ExampleCircuit_sch.png)
 
 * * *
 
-## Con relé
+## Con un relé podemos hacer que se activen ¡¡grandes corrientes eléctricas!!
 
 ![rele](imagenes/relee_arduino.jpg)
+
+![Danger](Dangers-of-electric-shock.jpg)
+
 
 #### Ejercicio: Cambiar al pin del esquema
 
 * * * 
 ## Veamos un poco de código
 
-	void setup()
+	void setup()  // Función de configuración
 	{
-	  pinMode(13,OUTPUT);
+	  pinMode(13,OUTPUT);  // Vamos a usar una salida
 	}
 
 
-	void loop()
+	void loop()  // Función de bucle. Se repite por siempre
 	{
-	  digitalWrite(13,HIGH);
-	  delay(1000);
-	  digitalWrite(13,LOW);
-	  delay(1000);
-	}
+	  digitalWrite(13,HIGH);  	// Activamos la salida 13
+	  delay(1000);				// Esperamos
+	  digitalWrite(13,LOW);		// Desativamos la salida 13
+	  delay(1000);				// Esperamos
+	}							// Cuando termina se vuelve a llamar
 
 #### Ejercicio: Cambiar al pin del esquema
 #### Ejercicio: Cambiar el pin utilizado al pin 2
+
 * * * 
 # Envío de datos serie
 
