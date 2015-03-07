@@ -20,14 +20,13 @@
 * * *
 
 ## Así es internamente
+#### (mucho por descubrir)
 
 ![pinout](imagenes/ccb2f5f1008b324e19add5295cc14e68.jpg)
 
 * * *
 
-# Parpadeo (blink)
-
-### Necesitamos:
+# Para programar necesitamos:
 
 ### * Programa
 
@@ -38,9 +37,9 @@
 
 * * *
 
-### ¿Qué es un programa?
+### ¿Qué es un programa? un conjunto de instrucciones ordenadas
 
-#### Programa parpadeo
+#### Programa parpadeo (blink)
 
 * Encendemos
 * Esperamos
@@ -50,9 +49,11 @@
 
 * * *
 
-## Programa bitbloq
+## Programando con Bitbloq
 
 ### http://bitbloq.bq.com
+
+Programa parpadeo
 
 ![programa blink](imagenes/blink.png)
 
