@@ -89,11 +89,11 @@ Programa parpadeo
 
 * * *
 
-## Con un relé podemos hacer que se activen ¡¡grandes corrientes eléctricas!!
+## Con un relé usaremos ¡¡grandes corrientes eléctricas!!
 
 ![rele](imagenes/relee_arduino.jpg)
 
-![Danger](Dangers-of-electric-shock.jpg)
+![Danger](imagenes/Dangers-of-electric-shock.jpg)
 
 
 #### Ejercicio: Cambiar al pin del esquema
