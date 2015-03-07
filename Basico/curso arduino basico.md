@@ -154,8 +154,8 @@ Programa parpadeo
 
 	void loop()
 	{
-	  int valorSalida=0;				// la **variable** valorSalida empieza en 0
-v	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
+	  int valorSalida=0;				// la variable valorSalida empieza en 0
+	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
 	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
 	    Serial.println(valorSalida);	// Enviamos al pc la variable
 	    delay(100);						// Esperamos 0,1 segundos
@@ -224,9 +224,9 @@ v	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
 
 ## Para los sensores tenemos que seguir los pasos
 
-* ### Haremos la lectura
-* ### Conversiones: traducimos a valores físicos (aritmética/mapeo) según el fabricante
-* ### Calibraciones: establecemos valores de referencia
+* Haremos la lectura
+* Conversiones: traducimos a valores físicos (aritmética/mapeo) según el fabricante
+* Calibraciones: establecemos valores de referencia
 
 [Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica) [Sensores](http://www.slideshare.net/javacasm/46-sensores)
 
@@ -355,8 +355,8 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 
 ### Usaremos lcd I2C
 
-* #### Descargamos de su [origen](http://www.4tronix.co.uk/arduino/sketches/LiquidCrystal_V1.2.1.zip)
-* #### Descomprimimos en la carpeta **arduino/libraries**
+* Descargamos de su [origen](http://www.4tronix.co.uk/arduino/sketches/LiquidCrystal_V1.2.1.zip)
+* Descomprimimos en la carpeta **arduino/libraries**
 
 ### Montaje
 
@@ -395,10 +395,10 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 
 ## Veamos los componentes:
 
-* ### Sensor lm35 conectado a A0
-* ### Potenciómetro conectado a A1
-* ### Rele conectado a D7
-* ### LCD conectado a A4 y A5
+* Sensor lm35 conectado a A0
+* Potenciómetro conectado a A1
+* Relé conectado a D7
+* LCD conectado a A4 y A5
 
 ## Programa
 
