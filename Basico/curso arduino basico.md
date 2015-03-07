@@ -155,7 +155,7 @@ Programa parpadeo
 	void loop()
 	{
 	  int valorSalida=0;				// la **variable** valorSalida empieza en 0
-	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
+v	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
 	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
 	    Serial.println(valorSalida);	// Enviamos al pc la variable
 	    delay(100);						// Esperamos 0,1 segundos
@@ -181,6 +181,9 @@ Programa parpadeo
 
 ![ledstripbjt](imagenes/ledstripbjt.gif)
 
+
+[Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica)
+
 * * *
 
 # Lectura de datos analógicos
@@ -193,7 +196,7 @@ Programa parpadeo
 ### Equivalen a los valores de 0V y 5V
 
 * * * 
-# Potenciómetro regulando una salida
+# Potenciómetro regulando una salida analógica
 
 ![lecturaAnalogica](imagenes/arduino_pot_led.png)
 
@@ -217,12 +220,13 @@ Programa parpadeo
 ### Ejercicio: usar 3 potenciómetros para controlar los colores de un led RGB
 
 * * * 
+# Sensores
 
-# Para los sensores:
+## Para los sensores tenemos que seguir los pasos
 
-* Haremos la lectura
-* Conversiones: traducimos a valores físicos (aritmética/mapeo)
-* Calibraciones: establecemos valores de referencia
+* ### Haremos la lectura
+* ### Conversiones: traducimos a valores físicos (aritmética/mapeo) según el fabricante
+* ### Calibraciones: establecemos valores de referencia
 
 [Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica) [Sensores](http://www.slideshare.net/javacasm/46-sensores)
 
@@ -233,14 +237,14 @@ Programa parpadeo
 
 ## Usamos la fórmula del fabricante
 
-temperatura = valorAnalogico*5*100/1024 
+	temperatura = valorAnalogico*5*100/1024 
 
 [pinout lm35](imagenes/tmp36pinout.gif)
 
 * * * 
 ## El código quedaría así:
 
-### Enviaremos el dato leído al pc con la función __ Serial __
+### Enviaremos el dato leído al pc con la función __Serial__
 
 	int sensorPin=A0;
 
@@ -266,6 +270,7 @@ temperatura = valorAnalogico*5*100/1024
 ![boton](imagenes/button.png)
 
 ## Programa
+
 ### Usamos una sentencia condicional: si se cumple esto...se hace aquello
 ![boton](imagenes/Boton_Led.png)
 
@@ -344,14 +349,14 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 
 ### Existen varias librerías:
 
-[Librería LCD MF](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
-[Ejemplos lcd](http://arduino-info.wikispaces.com/LCD-Blue-I2C#v3)
-[Ejemplo bq](http://diwo.bq.com/programando-lcd/)
+* [Librería LCD MF](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
+* [Ejemplos lcd](http://arduino-info.wikispaces.com/LCD-Blue-I2C#v3)
+* [Ejemplo bq](http://diwo.bq.com/programando-lcd/)
 
 ### Usaremos lcd I2C
 
 * #### Descargamos de su [origen](http://www.4tronix.co.uk/arduino/sketches/LiquidCrystal_V1.2.1.zip)
-* #### Descomprimimos en la carpeta ** arduino/libraries **
+* #### Descomprimimos en la carpeta **arduino/libraries**
 
 ### Montaje
 
@@ -384,7 +389,11 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 # Agradecimientos:
 
 [Arduino](http://arduino.cc)
+
 [Adafruit](http://adafruit.com)
+
 [Sparkfun](http://sparkfun.com)
+
 [wikipedia](http://es.wikipedia.org)
+
 [José Pujol](https://tecnopujol.wordpress.com)
