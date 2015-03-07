@@ -52,6 +52,8 @@
 
 ### http://bitbloq.bq.com
 
+#### [Instalación del IDE de arduino](http://www.slideshare.net/javacasm/32-instalacin-del-ide)
+
 Programa parpadeo
 
 ![programa blink](imagenes/blink.png)
@@ -142,17 +144,17 @@ Programa parpadeo
 
 ### Si vemos el código
 
-	void setup()
+	void setup()						// configuracion
 	{
-	  pinMode(0,OUTPUT);
+	  pinMode(5,OUTPUT);				// Usaremos la patilla 5 como salida
 	}
 
 	void loop()
 	{
-	  int valorSalida=0;
-	  while (valorSalida < 256) {
-	    analogWrite(0,valorSalida);
-	    delay(100);
+	  int valorSalida=0;				// la variable valorSalida empieza en 0
+	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
+	    analogWrite(5,valorSalida);		// pasamos el valor a la patilla 5
+	    delay(100);						// Esperamos 0,1 segundos
 	   }
 
 	}
@@ -178,9 +180,15 @@ Programa parpadeo
 
 # Lectura de datos analógicos
 
-## Sensores (luz, temperatura)
+* ## Sensores (luz, temperatura)
 
-## Potenciómetro: resistencia variable
+* ## Potenciómetro: resistencia variable (mando de volumen)
+
+### Se leen valores enteros entre 0 y 1023
+### Equivalen a los valores de 0V y 5V
+
+* * * 
+# Potenciómetro regulando una salida
 
 ![lecturaAnalogica](imagenes/arduino_pot_led.png)
 
@@ -191,15 +199,14 @@ Programa parpadeo
 	void setup()
 	{
 	  pinMode(5,OUTPUT);
-
 	}
 
 
 	void loop()
 	{
-	  int valorPotenciometro=analogRead(0);
-	  int ValorSalida=map(valorPotenciometro,0,1023,0,255);
-	  analogWrite(5,ValorSalida);
+	  int valorPotenciometro=analogRead(0);				 	// Leemos el valor
+	  int ValorSalida=map(valorPotenciometro,0,1023,0,255);	// Convertimos al rango de salida
+	  analogWrite(5,ValorSalida);							// Escribimos el valor en la salida
 	}
 
 ### Ejercicio: usar 3 potenciómetros para controlar los colores de un led RGB
@@ -217,7 +224,7 @@ Programa parpadeo
 
 ![lm35](imagenes/Arduino_lm35_board_setup.jpg)
 
-## Usamos la fórmula:
+## Usamos la fórmula del fabricante
 
 temperatura = valorAnalogico*5*100/1024 
 
@@ -226,18 +233,20 @@ temperatura = valorAnalogico*5*100/1024
 * * * 
 ## El código quedaría así:
 
+### Enviaremos el dato leído al pc con la función __ Serial __
+
 	int sensorPin=A0;
 
 	void setup()
 	{
-		Serial.begin(9600);
+		Serial.begin(9600);  // Configuramos la conexión
 	}
 
 	void loop()
 	{
-		int sensorValue= analogRead(sensorPin);
+		int sensorValue= analogRead(sensorPin);  // Leemos el valor analógico
 		float temperatura=(sensorValue*5*100)/1024; // float para tener decimales
-		Serial.println(temperatura);
+		Serial.println(temperatura);			// Enviamos el dato al PC
 		delay(1000);
 	}
 
@@ -245,11 +254,34 @@ temperatura = valorAnalogico*5*100/1024
 
 # Pulsaciones: botones
 
-## Circuito
+## Montaje 
 
 ![boton](imagenes/button.png)
 
+## Programa
+### Usamos una sentencia condicional: si se cumple esto...se hace aquello
+![boton](imagenes/Boton_Led.png)
 
+### Su código
+
+	void setup()
+	{
+	  pinMode(2,INPUT_PULLUP);  // Usamos 2 como entrada
+	  pinMode(13,OUTPUT);		// Usamos 13 como salida
+	}
+
+
+	void loop()
+	{
+	  if (digitalRead(2) == HIGH)  	// Si el pulsador está pulsado
+	  {
+	    digitalWrite(13,HIGH);		//Encendemos el led 13
+	  }
+	  else 							// Si NO se cumple
+	  {		
+	    digitalWrite(13,LOW);		// Lo apagamos
+	  }
+	}
 
 * * *
 
@@ -257,12 +289,15 @@ temperatura = valorAnalogico*5*100/1024
 
 * * *
 ¿Qué es una librería?
+
 Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [servo](http://arduino.cc/en/pmwiki.php?n=Reference/Servo)
 
 [Librería LCD MF](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
 [Ejemplos lcd](http://arduino-info.wikispaces.com/LCD-Blue-I2C#v3)
 [Ejemplo bq](http://diwo.bq.com/programando-lcd/)
+
 * * *
+
 # Agradecimientos:
 
 [Arduino](http://arduino.cc)
