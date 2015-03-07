@@ -283,14 +283,54 @@ temperatura = valorAnalogico*5*100/1024
 	  }
 	}
 
+
+* * *
+# Librerías: conjunto de código empaquetado
+
+Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [servo](http://arduino.cc/en/pmwiki.php?n=Reference/Servo)
+
+### Para incluir una librería en código hacemos
+
+	#include <Libreria.h>
+
+* * * 
+# Servo
+
+### Los servos son motores capaces de mantener una posición angular. 
+### Se les dice él ángulo que deben formar
+
+
+##### (también hay servos que pueden girar todo lo que quieran)
+
+* * * 
+
+![program](imagenes/ServoControladoPotenciometro.png)
+
+### El código
+
+	#include <Servo.h>  // Incluimos la librería
+
+	Servo servo;       // Declaramos que vamos a usar 1 servo
+
+	void setup()
+	{
+	  servo.attach(7); // Configuramos el servo conectado al pin 7
+	}
+
+
+	void loop()
+	{
+	  int valorPotenciometro=analogRead(A0); 					// Leemos el potenciometro
+	  int PosicionServo=map(valorPotenciometro,0,1023,0,180);	// Reescalamos el valor
+	  servo.write(valorPotenciometro);							// Le pedimos que gira hasta ese ángulo
+	  delay(50);												// Le damos tiempo para que complete el giro
+	}
+
 * * *
 
 # LCD
 
-* * *
-¿Qué es una librería?
 
-Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [servo](http://arduino.cc/en/pmwiki.php?n=Reference/Servo)
 
 [Librería LCD MF](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
 [Ejemplos lcd](http://arduino-info.wikispaces.com/LCD-Blue-I2C#v3)
