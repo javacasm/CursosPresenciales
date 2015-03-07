@@ -136,9 +136,11 @@ Programa parpadeo
 # Escritura de valores analógicos
 
 ## Usando técnicas como PWM podemos simular valores intermedios: 0 - 255
-### (sólo en algunos pines)
+### (sólo en algunos pines ~ )
 
-## Vamos a hacer que cambie: usaremos una variable
+## Como vamos a hacer que cambie de valor usaremos una variable
+
+![dimmer](images/dimmer-circuit3.png)
 
 ![analogWrite](imagenes/AnalogWrite.png)
 
@@ -146,21 +148,24 @@ Programa parpadeo
 
 	void setup()						// configuracion
 	{
-	  pinMode(5,OUTPUT);				// Usaremos la patilla 5 como salida
+	  pinMode(9,OUTPUT);				// Usaremos la patilla 5 como salida
+	  Serial.begin(9600);				// Configuramos la conexión con el PC
 	}
 
 	void loop()
 	{
-	  int valorSalida=0;				// la variable valorSalida empieza en 0
+	  int valorSalida=0;				// la **variable** valorSalida empieza en 0
 	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
-	    analogWrite(5,valorSalida);		// pasamos el valor a la patilla 5
+	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
+	    Serial.println(valorSalida);	// Enviamos al pc la variable
 	    delay(100);						// Esperamos 0,1 segundos
 	   }
 
 	}
 
 * * *
-# Led RGB: 3 led (Red,Green,Blue) con una de las patillas común
+# Led RGB
+## 3 leds (Red,Green,Blue) con una de las patillas común
 
 ## Positivo (Ánodo) Común
 
@@ -218,6 +223,8 @@ Programa parpadeo
 * Haremos la lectura
 * Conversiones: traducimos a valores físicos (aritmética/mapeo)
 * Calibraciones: establecemos valores de referencia
+
+[Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica) [Sensores](http://www.slideshare.net/javacasm/46-sensores)
 
 * * *
 # Sensor de temperatura LM35: viene calibrado y linealizado
@@ -326,6 +333,8 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 	  servo.write(valorPotenciometro);							// Le pedimos que gira hasta ese ángulo
 	  delay(50);												// Le damos tiempo para que complete el giro
 	}
+
+#### [Más sobre servos](http://www.slideshare.net/javacasm/arduino-prctico-servos)
 
 * * *
 
