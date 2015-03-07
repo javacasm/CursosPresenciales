@@ -135,6 +135,23 @@
 
 ![analogWrite](imagenes/AnalogWrite.png)
 
+### Si vemos el código
+
+	void setup()
+	{
+	  pinMode(0,OUTPUT);
+	}
+
+	void loop()
+	{
+	  int valorSalida=0;
+	  while (valorSalida < 256) {
+	    analogWrite(0,valorSalida);
+	    delay(100);
+	   }
+
+	}
+
 * * *
 # Led RGB: 3 led (Red,Green,Blue) con una de las patillas común
 
@@ -146,7 +163,9 @@
 
 ![LedRGBNcomun](imagenes/LedRGBNcomun.png)
 
-## Tiras de leds
+## Tiras de leds: Necesitamos más potencia por lo que usaremos un transistor como amplificador.
+
+### El montaje es sencillo
 
 ![ledstripbjt](imagenes/ledstripbjt.gif)
 
@@ -156,8 +175,27 @@
 
 ## Sensores (luz, temperatura)
 
-## Potenciómetro
+## Potenciómetro: resistencia bariable
+
 ![lecturaAnalogica](imagenes/arduino_pot_led.png)
+
+![SalidaAnalogicaProporcional](imagenes/SalidaAnalogicaProporcional)
+
+### El código:
+
+	void setup()
+	{
+	  pinMode(5,OUTPUT);
+
+	}
+
+
+	void loop()
+	{
+	  int valorPotenciometro=analogRead(0);
+	  int ValorSalida=map(valorPotenciometro,0,1023,0,255);
+	  analogWrite(5,ValorSalida);
+	}
 
 * * * 
 
