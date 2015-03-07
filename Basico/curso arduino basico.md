@@ -140,7 +140,7 @@ Programa parpadeo
 
 ## Como vamos a hacer que cambie de valor usaremos una variable
 
-![dimmer](images/dimmer-circuit3.png)
+![dimmer](imagenes/dimmer-circuit3.png)
 
 ![analogWrite](imagenes/AnalogWrite.png)
 
