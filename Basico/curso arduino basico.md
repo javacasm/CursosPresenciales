@@ -385,6 +385,29 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 	}
 
 * * *
+# Proyecto: termostato configurable y que activa un relé
+
+[Proyecto 1](https://arduinolab.wordpress.com/)
+![proyecto](imagenes/arduino-humidity-and-temperature-monitor_bb.jpg)
+
+[Proyecto 2](http://www.electroschematics.com/8998/arduino-temperature-controlled-relay/)
+![proyecto2](imagenes/arduino-lcd-lm35-550x309.jpg)
+
+## Veamos los componentes:
+
+* ### Sensor lm35 conectado a A0
+* ### Potenciómetro conectado a A1
+* ### Rele conectado a D7
+* ### LCD conectado a A4 y A5
+
+## Programa
+
+Comparamos el valor leido del potenciómetro con el leído del potenciómetro.
+Si este es máyor activamos el relé
+Mostramos en el lcd la temperatura actual
+
+
+* * *
 
 # Agradecimientos:
 
