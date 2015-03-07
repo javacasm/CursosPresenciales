@@ -101,9 +101,9 @@ Programa parpadeo
 * * * 
 ## Veamos un poco de código
 
-	void setup()  // Función de configuración
+	void setup()  				// Función de configuración
 	{
-	  pinMode(13,OUTPUT);  // Vamos a usar una salida
+	  pinMode(13,OUTPUT);  		// Vamos a usar una salida
 	}
 
 
@@ -162,11 +162,11 @@ Programa parpadeo
 
 ## Positivo (Ánodo) Común
 
-![LedRGBPcomun](imagenes/LedRGBPcomun.png)
+![LedRGBPcomun](imagenes/LedRGBPcomun.jpg)
 
 ## Negativo (Cátodo) Común
 
-![LedRGBNcomun](imagenes/LedRGBNcomun.png)
+![LedRGBNcomun](imagenes/LedRGBNComun.png)
 
 ## Tiras de leds: Necesitamos más potencia por lo que usaremos un transistor como amplificador.
 
@@ -180,11 +180,11 @@ Programa parpadeo
 
 ## Sensores (luz, temperatura)
 
-## Potenciómetro: resistencia bariable
+## Potenciómetro: resistencia variable
 
 ![lecturaAnalogica](imagenes/arduino_pot_led.png)
 
-![SalidaAnalogicaProporcional](imagenes/SalidaAnalogicaProporcional)
+![SalidaAnalogicaProporcional](imagenes/SalidaAnalogicaProporcional.png)
 
 ### El código:
 
@@ -208,38 +208,48 @@ Programa parpadeo
 
 # Para los sensores:
 
-* lectura
-* Conversiones (aritmética/mapeo)
-* Calibraciones
+* Haremos la lectura
+* Conversiones: traducimos a valores físicos (aritmética/mapeo)
+* Calibraciones: establecemos valores de referencia
 
 * * *
-# Sensor de temperatura LM35
-
-float valor*5*100/1024 //valores máximos
+# Sensor de temperatura LM35: viene calibrado y linealizado
 
 ![lm35](imagenes/Arduino_lm35_board_setup.jpg)
 
+## Usamos la fórmula:
 
-int sensorPin=A0;
+temperatura = valorAnalogico*5*100/1024 
 
-void setup()
-{
-	Serial.begin(9600);
-}
+[pinout lm35](imagenes/tmp36pinout.gif)
 
-void loop()
-{
-	int sensorValue= analogRead(sensorPin);
-	float temperatura=(sensorValue*5*100)/1024; // float para tener decimales
-	Serial.println(temperatura);
-	delay(1000);
-}
+* * * 
+## El código quedaría así:
+
+	int sensorPin=A0;
+
+	void setup()
+	{
+		Serial.begin(9600);
+	}
+
+	void loop()
+	{
+		int sensorValue= analogRead(sensorPin);
+		float temperatura=(sensorValue*5*100)/1024; // float para tener decimales
+		Serial.println(temperatura);
+		delay(1000);
+	}
 
 * * *
 
 # Pulsaciones: botones
 
+## Circuito
+
 ![boton](imagenes/button.png)
+
+
 
 * * *
 
