@@ -28,9 +28,9 @@
 
 # Para programar necesitamos:
 
-### * Programa
+* ### Programa
 
-### * Montaje
+* ### Montaje
 
 #### (descargar el programa en la placa)
 
@@ -198,6 +198,8 @@ Programa parpadeo
 	  analogWrite(5,ValorSalida);
 	}
 
+### Ejercicio: usar 3 potenciómetros para controlar los colores de un led RGB
+
 * * * 
 
 # Para los sensores:
@@ -207,10 +209,27 @@ Programa parpadeo
 * Calibraciones
 
 * * *
-LM35
+# Sensor de temperatura LM35
+
 float valor*5*100/1024 //valores máximos
 
 ![lm35](imagenes/Arduino_lm35_board_setup.jpg)
+
+
+int sensorPin=A0;
+
+void setup()
+{
+	Serial.begin(9600);
+}
+
+void loop()
+{
+	int sensorValue= analogRead(sensorPin);
+	float temperatura=(sensorValue*5*100)/1024; // float para tener decimales
+	Serial.println(temperatura);
+	delay(1000);
+}
 
 * * *
 
